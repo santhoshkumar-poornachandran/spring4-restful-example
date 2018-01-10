@@ -63,28 +63,28 @@
 		</activation>
 		<properties>
 		    <tomcat-server>TomcatServer</tomcat-server>
-		    <tomcat-url>http://localhost:8080/manager</tomcat-url>
+		    <tomcat-url>http://localhost:8080/manager/text</tomcat-url>
 		</properties>
 	    </profile>
 	   <profile>
 		<id>tomcat1</id>
 		<properties>
 		    <tomcat-server>Tomcat8-9090</tomcat-server>
-		    <tomcat-url>http://localhost:9090/manager</tomcat-url>
+		    <tomcat-url>http://localhost:9090/manager/text</tomcat-url>
 		</properties>
 	    </profile>
 	   <profile>
 		<id>tomcat2</id>
 		<properties>
 		    <tomcat-server>Tomcat8-9091</tomcat-server>
-		    <tomcat-url>http://localhost:9091/manager</tomcat-url>
+		    <tomcat-url>http://localhost:9091/manager/text</tomcat-url>
 		</properties>
 	    </profile>
 	   <profile>
 		<id>tomcat3</id>
 		<properties>
 		    <tomcat-server>Tomcat8-9092</tomcat-server>
-		    <tomcat-url>http://localhost:9092/manager</tomcat-url>
+		    <tomcat-url>http://localhost:9092/manager/text</tomcat-url>
 		</properties>
 	    </profile>
 	</profiles>
