@@ -57,7 +57,7 @@
 	</build>
 	<profiles>
 	    <profile>
-		<id>tomcat</id>
+		<id>tomcat_default</id>
 		<activation>
 		    <activeByDefault>true</activeByDefault>
 		</activation>
