@@ -38,10 +38,11 @@
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.2</version>
-					<configuration>
-						<url>http://localhost:9090/manager/text</url>
-						<server>Tomcat8-9090</server>
-						<path>/springrest</path>
+					<configuration>						
+						<server>${tomcat-server}</server>
+						<url>${tomcat-url}</url>
+						<path>/${project.build.finalName}</path>
+						<update>true</update>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -54,4 +55,37 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<profiles>
+	    <profile>
+		<id>tomcat</id>
+		<activation>
+		    <activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+		    <tomcat-server>TomcatServer</tomcat-server>
+		    <tomcat-url>http://localhost:8080/manager</tomcat-url>
+		</properties>
+	    </profile>
+	   <profile>
+		<id>tomcat1</id>
+		<properties>
+		    <tomcat-server>Tomcat8-9090</tomcat-server>
+		    <tomcat-url>http://localhost:9090/manager</tomcat-url>
+		</properties>
+	    </profile>
+	   <profile>
+		<id>tomcat2</id>
+		<properties>
+		    <tomcat-server>Tomcat8-9091</tomcat-server>
+		    <tomcat-url>http://localhost:9091/manager</tomcat-url>
+		</properties>
+	    </profile>
+	   <profile>
+		<id>tomcat3</id>
+		<properties>
+		    <tomcat-server>Tomcat8-9092</tomcat-server>
+		    <tomcat-url>http://localhost:9092/manager</tomcat-url>
+		</properties>
+	    </profile>
+	</profiles>
 </project>
