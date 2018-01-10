@@ -31,7 +31,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>SpringRest</finalName>
+		<finalName>springrest</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
